@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "src/index.js",
+            "dest": "build/index.js",
+            "minify": true,
+            "env": {
+                "NODE_ENV": "production"
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ]
+}
