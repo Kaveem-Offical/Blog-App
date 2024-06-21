@@ -11,6 +11,7 @@ const cookieParser = require("cookie-parser");
 const multer = require("multer");
 const uploadMiddleware = multer({ dest: "uploads/" });
 const fs = require("fs");
+const dotenv = require("dotenv").config()
 
 app.use(cookieParser());
 app.use(cors({ credentials: true, origin: `${process.env.URL}` }));
