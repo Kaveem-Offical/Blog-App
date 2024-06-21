@@ -14,7 +14,7 @@ const fs = require("fs");
 const dotenv = require("dotenv").config()
 
 app.use(cookieParser());
-app.use(cors({ credentials: true, origin: `${process.env.URL}` }));
+app.use(cors({ credentials: true, origin: process.env.URL }));
 app.use(express.json());
 app.use("/uploads", express.static(__dirname + "/uploads"));
 
