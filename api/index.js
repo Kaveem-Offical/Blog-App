@@ -13,7 +13,7 @@ const uploadMiddleware = multer({ dest: "uploads/" });
 const fs = require("fs");
 
 app.use(cookieParser());
-app.use(cors({ credentials: true, origin: "https://blog-app.vercel.app" }));
+app.use(cors({ credentials: true, origin: `${process.env.URL}` }));
 app.use(express.json());
 app.use("/uploads", express.static(__dirname + "/uploads"));
 
